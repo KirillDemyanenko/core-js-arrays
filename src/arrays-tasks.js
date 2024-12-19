@@ -349,8 +349,11 @@ function createChunks(arr, chunkSize) {
  *    generateOdds(2) => [ 1, 3 ]
  *    generateOdds(5) => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(/* len */) {
-  throw new Error('Not implemented');
+function generateOdds(len) {
+  return new Array(len * 2)
+    .fill(null)
+    .map((_, i) => i)
+    .filter((value) => value !== 0 && value % 2 === 1);
 }
 
 /**
